@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отправка сообщений из форм обратной связи</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <form class="j-form" enctype="multipart/form-data" method="post" onsubmit="send(event, '/mail/send.php', 'form-1-info')">
+        <input type="hidden" name="titleModal" value="Заголовок модального окна">
+        <input type="hidden" name="linkPage" value="https://site.ru">
+        <input type="hidden" name="titlePage" value="Заголовок страницы">
+        <input type="hidden" name="keyL" value="m">
+        <input type="hidden" name="keyP" value="d">
+
+        <input class="j-form-input" type="text" name="name" placeholder="Ваше имя">
+        <input class="j-form-input" type="tel" name="phone" placeholder="Телефон">
+        <input class="j-form-input" type="email" name="email" placeholder="Ваш email">
+        <textarea class="j-form-input" name="text" placeholder="Сообщение"></textarea>
+
+        <div class="j-form-info form-1-info"></div>
+
+        <fieldset class="j-form-buttons">
+            <button class="j-form-send">Отправить</button>
+        </fieldset>
+
+        <fieldset class="j-form-policy">
+            <input class="j-form-hide-checkbox" id="form-1-check" type="checkbox" name="policy" checked="checked" required>
+            <label class="j-form-chek-policy" for="form-1-check"></label>
+            <label class="j-form-label-policy" for="form-1-check"> Я согласен на обработку моих персональных данных *</label>
+        </fieldset>
+    </form>
+
+    <hr><br>
+
+    <form class="j-form" enctype="multipart/form-data" method="post" onsubmit="send(event, '/mail/send.php', 'form-2-info')">
+        <input type="hidden" name="titleModal" value="Заголовок модального окна">
+        <input type="hidden" name="linkPage" value="https://site.ru">
+        <input type="hidden" name="titlePage" value="Заголовок страницы">
+        <input type="hidden" name="keyL" value="m">
+        <input type="hidden" name="keyP" value="d">
+
+        <input class="j-form-input" type="text" name="name" placeholder="Ваше имя">
+        <input class="j-form-input" type="tel" name="phone" placeholder="Телефон">
+
+        <div class="j-form-info form-2-info"></div>
+
+        <fieldset class="j-form-buttons">
+            <button class="j-form-send">Отправить</button>
+        </fieldset>
+
+        <fieldset class="j-form-policy">
+            <input class="j-form-hide-checkbox" id="form-2-check" type="checkbox" name="policy" checked="checked" required>
+            <label class="j-form-chek-policy" for="form-2-check"></label>
+            <label class="j-form-label-policy" for="form-2-check"> Я согласен на обработку моих персональных данных *</label>
+        </fieldset>
+    </form>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
